@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feliz Cumpleaños Kyo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>¡Feliz Cumpleaños Kyo!</h1>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#gallery">Tus Regalos</a></li>
+                <li><a href="mensaje.html">Mensaje</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-message">
+                <h2>Querida Kyo, ¡este espacio es solo para ti!</h2>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p>Cuenta atrás para tu cumpleaños:</p>
+                    <div class="countdown-container">
+                        <div id="countdown">
+                            <div class="time-box">
+                                <span id="days" class="time-unit"></span>
+                                <span class="label">Días</span>
+                            </div>
+                            <div class="time-box">
+                                <span id="hours" class="time-unit"></span>
+                                <span class="label">Horas</span>
+                            </div>
+                            <div class="time-box">
+                                <span id="minutes" class="time-unit"></span>
+                                <span class="label">Minutos</span>
+                            </div>
+                            <div class="time-box">
+                                <span id="seconds" class="time-unit"></span>
+                                <span class="label">Segundos</span>
+                            </div>
+                        </div>
+                        <div id="birthday-message" class="birthday-message"></div>
+                        <div id="current-time">
+                            <p>Fecha y hora actual en Argentina:</p>
+                            <span id="argentina-time" class="time-unit"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="kyo_banner.png" alt="Regalos especiales para Kyo">
+                </div>
+            </div>
+        </section>        
+
+        <section class="gallery" id="gallery">
+            <h2>Tus Regalos, Kyo</h2>
+            <div class="grid-container">
+                <div class="grid-item" onclick="revealGift(this)">
+                    <img class="cover" src="gift.png" alt="Regalo">
+                    <img class="hidden" src="cat.png" alt="Manualidad 1">
+                </div>
+                <div class="grid-item" onclick="revealGift(this)">
+                    <img class="cover" src="gift.png" alt="Regalo">
+                    <img class="hidden" src="kity.png" alt="Manualidad 2">
+                </div>
+                <div class="grid-item" onclick="revealGift(this)">
+                    <img class="cover" src="gift.png" alt="Regalo">
+                    <img class="hidden" src="rosas.jpg" alt="Manualidad 3">
+                </div>
+            </div>
+        </section>        
+    </main>
+
+    <footer>
+        <p>Con todo mi cariño, dedicado a ti, Kyo - © 2024</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

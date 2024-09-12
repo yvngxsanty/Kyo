@@ -1,0 +1,494 @@
+/* Estilos base */
+:root {
+    --primary-color: #ff80bf;
+    --secondary-color: #ff4d94;
+    --background-color: #fff5f8;
+    --text-color: #333;
+    --shadow-color: rgba(255, 77, 148, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Estilos del Header */
+header {
+    background-color: var(--primary-color);
+    padding: 1.5em;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-family: 'Nerko One', cursive;
+    font-size: 3.5em;
+    color: #fff;
+    text-shadow: 2px 2px 5px var(--shadow-color);
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0.5em 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    color: var(--secondary-color);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-radius: 15px;
+    margin: 2em auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.hero-message {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-message h2 {
+    font-size: 2.5em;
+    font-family: 'Nerko One', cursive;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-message::before,
+.hero-message::after {
+    content: '🎉';
+    font-size: 5em;
+    position: absolute;
+    opacity: 0.2;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-message::before {
+    top: -0.2em;
+    left: 0.2em;
+}
+
+.hero-message::after {
+    content: '🎂';
+    bottom: -0.2em;
+    right: 0.2em;
+    animation-delay: 1.5s;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 2em;
+}
+
+.hero-text {
+    flex: 1;
+    margin-right: 2em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+/* Estilos mejorados para el contador y la fecha */
+.countdown-container {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+}
+
+.time-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    margin: 0.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(25% - 1em);
+    min-width: 80px;
+}
+
+.time-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.time-unit {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    font-family: 'Nerko One', cursive;
+}
+
+.label {
+    font-size: 0.9em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+}
+
+#current-time {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+#current-time p {
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+#argentina-time {
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Nerko One', cursive;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Galería */
+.gallery {
+    padding: 3em 2em;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    font-family: 'Nerko One', cursive;
+    color: var(--secondary-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    justify-items: center;
+}
+
+.grid-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.grid-item img.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    font-size: 1.1em;
+    box-shadow: 0 -4px 12px var(--shadow-color);
+}
+
+/* Estilos para el mensaje de cumpleaños */
+.birthday-message {
+    font-size: 2em;
+    font-family: 'Nerko One', cursive;
+    color: #fff;
+    text-align: center;
+    margin: 1em 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+    display: none;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--primary-color), 0 0 20px var(--primary-color);
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary-color), 0 0 40px var(--primary-color);
+    }
+}
+
+/* Estilos para el confeti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f2d74e;
+    animation: confetti 5s ease-in-out -2s infinite;
+    transform-origin: left top;
+}
+
+.confetti:nth-child(1) {
+    background-color: #f2d74e; left: 10%; animation-delay: 0;
+}
+.confetti:nth-child(2) {
+    background-color: #95c3de; left: 20%; animation-delay: -5s;
+}
+.confetti:nth-child(3) {
+    background-color: #ff9a91; left: 30%; animation-delay: -3s;
+}
+.confetti:nth-child(4) {
+    background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+}
+.confetti:nth-child(5) {
+    background-color: #95c3de; left: 50%; animation-delay: -4s;
+}
+.confetti:nth-child(6) {
+    background-color: #ff9a91; left: 60%; animation-delay: -6s;
+}
+.confetti:nth-child(7) {
+    background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+}
+.confetti:nth-child(8) {
+    background-color: #95c3de; left: 80%; animation-delay: -2s;
+}
+.confetti:nth-child(9) {
+    background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+}
+.confetti:nth-child(10) {
+    background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+}
+
+@keyframes confetti {
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
+    .hero, .gallery {
+        margin: 2em 1em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav h1 {
+        font-size: 3em;
+    }
+
+    .hero-message h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .hero-content {
+        padding: 2em 1em;
+    }
+
+    .gallery h2 {
+        font-size: 2.2em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    #countdown {
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        width: calc(50% - 1em);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-message h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .gallery h2 {
+        font-size: 2em;
+    }
+
+    .time-box {
+        padding: 0.6em;
+    }
+
+    .time-unit {
+        font-size: 1.5em;
+    }
+
+    .label {
+        font-size: 0.7em;
+    }
+
+    #argentina-time {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav h1 {
+        font-size: 2em;
+    }
+
+    .hero-message h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    .gallery h2 {
+        font-size: 1.8em;
+    }
+
+    .time-box {
+        padding: 0.5em;
+    }
+
+    .time-unit {
+        font-size: 1.2em;
+    }
+
+    .label {
+        font-size: 0.6em;
+    }
+}
